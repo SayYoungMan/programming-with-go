@@ -39,3 +39,18 @@
 - Schedules goroutines inside an OS thread
 - Like a little OS inside a single OS thread
 - `Logical processor` is mapped to a thread
+
+## Interleavings
+- Order of execution within a task is known
+- Order of execution between concurrent tasks is unknown
+- Interleaving of instructions between tasks is unknown
+- Many interleavings are possible and must consider all possibilities
+- Ordering is `non-deterministic`
+
+## Race conditions
+- Outcome depends on non-deterministic ordering
+- Races occur due to communication
+
+### Communication between Tasks
+- Threads are largely independent but not completely independent
+- Should aim to avoid communicating between goroutines as little as possible
